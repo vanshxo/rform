@@ -1,0 +1,184 @@
+/* Container for the entire landing section */
+.landing-container1 {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full height of the viewport */
+    background-color: black;
+    overflow: hidden;
+}
+.responsive-image{
+    position: absolute;
+    width: 60vw; 
+    height: auto; 
+    maxHeight: 100vh; 
+    left: 5%; 
+    
+    transform: rotate(-90deg);
+    objectFit: cover ;
+ 
+}
+/* Image styling */
+.insta{
+    position: absolute;
+    left: 67%;
+    top: 72%;
+    
+    font-family: 'Inter', sans-serif;
+    
+    font-size: 3vw; /* Responsive font size */
+    
+    color:white;
+   
+}
+.link{
+    position: absolute;
+    left: 72%;
+    top: 72%;
+    
+    font-family: 'Inter', sans-serif;
+    
+    font-size: 3vw; /* Responsive font size */
+    
+    color:white;
+}
+
+/* Custom font face */
+@font-face {
+    font-family: 'Mechsuit';
+    src: url('Mechsuit.otf') format('opentype'); /* Ensure the font path is correct */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* SPHINX Text */
+.sphinx {
+    position: absolute;
+    left: 70%;
+    top: 45%;
+    
+    transform: translateX(-50%); /* Center horizontally */
+    font-family: 'Mechsuit', sans-serif;
+    font-size: 5vw; /* Responsive font size */
+    line-height: 1;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/* MTSE Text */
+.mtse {
+    position: absolute;
+    left: 70%;
+    top: 60%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 2vw; /* Responsive font size */
+    line-height: 1;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/* MTSE Subtext */
+.mtse2 {
+    position: absolute;
+    left: 70%;
+    top: 67%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 2vw; /* Responsive font size */
+    line-height: 1;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/* Media Queries for Adjusting Layout on Smaller Screens */
+@media (max-width: 768px) {
+    .sphinx {
+        font-size: 5vw; /* Larger font size for smaller screens */
+    }
+    .mtse {
+        font-size: 2vw; 
+    }
+    .mtse2 {
+        font-size: 2vw; 
+    }
+    .btn {
+        font-size: 2vw; /* Larger button font size for readability */
+        padding: 0.8rem 1.5rem;
+    } 
+    .insta{
+        
+        
+        font-size: 4vw; 
+    }
+    .link{
+        
+        
+        font-size: 4vw; 
+
+    }
+     .responsive-image {
+        width: 90vw; /* Full width for mobile */
+        left: 5%; /* Keep consistent margin */
+        top: 10%; /* More space from the top */
+        transform: rotate(90);
+      }
+}
+
+@media (max-width: 480px) {
+    .sphinx,
+    .mtse,
+    .mtse2 {
+        left: 50%;
+        top: unset;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .insta{
+        left: 40%;
+        top: 80%;
+        font-size: 10vw; 
+    }
+    .link{
+        left: 53%;
+        top: 80%;
+        font-size: 10vw; 
+
+    }
+    .sphinx {
+        top: 60%;
+        font-size: 10vw; 
+    }
+    .mtse {
+        top: 70%;
+        font-size: 2.5vw; 
+    }
+    .mtse2 {
+        top: 75%;
+        font-size: 4vw;
+    }
+    .btn {
+        left:50%;
+        top: 80%;
+       
+        
+        font-size: 3vw;
+    }
+ 
+    .responsive-image {
+        width: 60vw; /* Increase width for smaller screens */
+        
+        height: auto;
+       transform: rotate(90deg);
+        
+      }
+
+}
+
+
+
+/* Group 59 */
+
+
+

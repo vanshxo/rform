@@ -116,25 +116,25 @@ button:hover {
   \*******************************************************************************************************************************************************************************************************************************************************************************/
 /* Container for the entire landing section */
 .landing-container {
-    position: relative; /* Relative to allow the image and text to be positioned absolutely inside */
+    position: relative;
     width: 100%;
     height: 100vh; /* Full height of the viewport */
-    background-color: black; /* Set background color to black */
-    overflow: hidden; /* Hide overflow to avoid unwanted scrollbars */
+    background-color: black;
+    overflow: hidden;
 }
 
 /* Image styling */
 .image {
-    position: absolute; /* Absolute positioning based on the container */
-    width: 80vw; /* Width of the image relative to viewport width */
-    height: auto; /* Height auto to maintain aspect ratio */
-    max-height: 100%; /* Limit max height to prevent overflow */
-    left: 4.13px; /* Specific distance from the left of the container */
-    top: 30%; /* Specific distance from the top of the container */
-    background-image: url('https://via.placeholder.com/960x1163'); /* Placeholder image */
-    background-size: cover; /* Ensure the image covers the entire area */
-    background-position: center; /* Center the background image */
-    transform: rotate(-89.87deg); /* Rotate the image as specified */
+    position: absolute;
+    width: 80vw; 
+    height: auto;
+    max-height: 100%;
+    left: 5%;
+    top: 30%;
+    transform: rotate(-90deg); /* More rounded rotation for consistent effect */
+    background-image: url('https://via.placeholder.com/960x1163');
+    background-size: cover;
+    background-position: center;
 }
 
 /* Custom font face */
@@ -147,82 +147,144 @@ button:hover {
 
 /* SPHINX Text */
 .sphinx {
-    position: absolute; /* Position absolutely */
-    left: calc(50% - 518px/2 + 300px);
-top: 210px;
-    font-family: 'Mechsuit', sans-serif; /* Add fallback font */
-    font-style: normal;
-    font-weight: 400;
-    font-size: 60px; /* Fixed font size */
-    line-height: 1; /* Adjust line height for better spacing */
+    position: absolute;
+    left: 70%;
+    top: 45%;
+    
+    transform: translateX(-50%); /* Center horizontally */
+    font-family: 'Mechsuit', sans-serif;
+    font-size: 5vw; /* Responsive font size */
+    line-height: 1;
     color: #FFFFFF;
-    text-align: center; /* Center the text */
+    text-align: center;
 }
 
 /* MTSE Text */
 .mtse {
-    position: absolute; /* Position absolutely */
-    left: 730px;
-top: 320px;
-    font-family: 'Inter', sans-serif; /* Add fallback font */
-    font-style: normal;
+    position: absolute;
+    left: 70%;
+    top: 60%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
     font-weight: 800;
-    font-size: 60px; /* Fixed font size */
-    line-height: 1; /* Adjust line height for better spacing */
+    font-size: 3.5vw; /* Responsive font size */
+    line-height: 1;
     color: #FFFFFF;
-    text-align: center; /* Center the text */
+    text-align: center;
+}
+
+/* MTSE Subtext */
+.mtse2 {
+    position: absolute;
+    left: 70%;
+    top: 67%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 1.2vw; /* Responsive font size */
+    line-height: 1;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/* Button styling */
+.btn {
+    background-color: rgb(210, 43, 43);
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    width: 199px;
+height: 47.16px;
+    /* border-radius: 5px; Add subtle rounded corners */
+    position: absolute;
+    left: 70%;
+    top: 75%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1vw; /* Responsive font size */
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: #c30e12; /* Darken on hover */
 }
 
 /* Media Queries for Adjusting Layout on Smaller Screens */
 @media (max-width: 768px) {
     .sphinx {
-        font-size: 60px; /* Smaller font size for tablets */
-        left: calc(50% - 150px); /* Adjust position for smaller screens */
+        font-size: 5vw; /* Larger font size for smaller screens */
     }
     .mtse {
-        font-size: 40px; /* Smaller font size for tablets */
-        left: calc(50% - 50px); /* Adjust position for smaller screens */
+        font-size: 4vw; 
     }
+    .mtse2 {
+        font-size: 1.5vw; 
+    }
+    .btn {
+        font-size: 2vw; /* Larger button font size for readability */
+        padding: 0.8rem 1.5rem;
+    }     
+     .responsive-image {
+        width: 90vw; /* Full width for mobile */
+        left: 5%; /* Keep consistent margin */
+        top: 10%; /* More space from the top */
+        transform: rotate(90);
+      }
 }
 
 @media (max-width: 480px) {
+    .sphinx,
+    .mtse,
+    .mtse2 {
+        left: 50%;
+        top: unset;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
     .sphinx {
-        font-size: 50px; /* Smaller font size for mobile devices */
-        left: calc(50% - 100px); /* Adjust position for smaller screens */
+        top: 60%;
+        font-size: 10vw; 
     }
     .mtse {
-        font-size: 30px; /* Smaller font size for mobile devices */
-        left: calc(50% - 30px); /* Adjust position for smaller screens */
+        top: 70%;
+        font-size: 8vw; 
     }
+    .mtse2 {
+        top: 75%;
+        font-size: 2vw;
+    }
+    .btn {
+        left:50%;
+        top: 80%;
+       
+        
+        font-size: 3vw;
+    }
+    .responsive-image {
+        width: 80vw; /* Increase width for smaller screens */
+        top: 0%; /* Adjust position */
+        height: auto;
+       transform: rotate(90);
+        
+      }
+
 }
-.mtse2 {
-    position: absolute; /* Position absolutely */
-    left: 555px;
-top: 420px;
-    font-family: 'Inter', sans-serif; /* Add fallback font */
-    font-style: normal;
-    font-weight: 800;
-    font-size: 25px; /* Fixed font size */
-    line-height: 1; /* Adjust line height for better spacing */
-    color: #FFFFFF;
-    text-align: center; /* Center the text */
-}
-.btn{
-    background-color:rgb(210, 43, 43); /* Bright red */
-    color: #fff; /* Text color */
-    padding: 12px; /* Button padding */
-    border: none; /* Remove border */
-    border-radius: none; /* Rounded corners */
+
+.responsive-image{
     position: absolute;
-    width: 199px;
-    height: 47.16px;
-    left: 700px;
-    top: 470px;
-    cursor: pointer; /* Pointer cursor on hover */
-    font-weight: bold;
-    text-transform: uppercase; /* Make the button label uppercase */
-    font-size: 1em; /* Consistent font size */
-    transition: background-color 0.3s ease; /* Smooth transition for hover */
+    width: auto; 
+    
+    height: 100vh; 
+    
+    
+    transform: rotate(-90deg);
+    objectFit: cover ;
+
+ 
 }
 
 /* Group 59 */
