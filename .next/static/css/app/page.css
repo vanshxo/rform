@@ -94,7 +94,7 @@ button:hover {
 
 @media (max-width: 768px) {
     form {
-        padding: 0.5rem; /* Less padding on smaller screens */
+        padding: 3rem; /* Less padding on smaller screens */
     }
 
     button {
@@ -109,6 +109,22 @@ button:hover {
     select {
         padding: 0.4rem; /* Less padding on mobile */
     }
+}
+
+/* RegistrationForm.css */
+.form-container {
+    position: relative; /* Allows for positioning child elements */
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height (or adjust as needed) */
+}
+
+.background-image {
+    z-index: 1; /* Place it behind the form */
+}
+
+.flex {
+    position: relative; /* Needed to make sure the overlay is behind the content */
+    z-index: 2; /* Place content above the background image */
 }
 
 /*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
@@ -126,12 +142,12 @@ button:hover {
 /* Image styling */
 .image {
     position: absolute;
-    width: 80vw; 
+    width: 100vw; 
     height: auto;
     max-height: 100%;
-    left: 5%;
+    left: 0px;
     top: 30%;
-    transform: rotate(-90deg); /* More rounded rotation for consistent effect */
+    transform: rotate(90deg); /* More rounded rotation for consistent effect */
     background-image: url('https://via.placeholder.com/960x1163');
     background-size: cover;
     background-position: center;
@@ -149,7 +165,7 @@ button:hover {
 .sphinx {
     position: absolute;
     left: 70%;
-    top: 45%;
+    top: 35%;
     
     transform: translateX(-50%); /* Center horizontally */
     font-family: 'Mechsuit', sans-serif;
@@ -163,13 +179,14 @@ button:hover {
 .mtse {
     position: absolute;
     left: 70%;
-    top: 60%;
+    top: 52%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
     font-weight: 800;
     font-size: 3.5vw; /* Responsive font size */
     line-height: 1;
     color: #FFFFFF;
+    margin-bottom: 35px;
     text-align: center;
 }
 
@@ -177,7 +194,7 @@ button:hover {
 .mtse2 {
     position: absolute;
     left: 70%;
-    top: 67%;
+    top: 63%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
     font-weight: 800;
@@ -191,7 +208,7 @@ button:hover {
 .btn {
     background-color: rgb(210, 43, 43);
     color: #fff;
-    padding: 1rem 2rem;
+    /* padding: 1rem 2rem; */
     border: none;
     width: 199px;
 height: 47.16px;
@@ -231,7 +248,7 @@ height: 47.16px;
         width: 90vw; /* Full width for mobile */
         left: 5%; /* Keep consistent margin */
         top: 10%; /* More space from the top */
-        transform: rotate(90);
+        rotate: "90deg";
       }
 }
 

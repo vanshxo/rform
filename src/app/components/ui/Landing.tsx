@@ -27,10 +27,10 @@ const Landing: React.FC = () => {
                     height={600}
                     style={{
                         position: 'absolute',
-                        width: '60vw', // Makes the image responsive based on viewport width
+                        width: '70vw', // Makes the image responsive based on viewport width
                         height: 'auto', // Maintains aspect ratio
                         maxHeight: '100vh', // Prevents overflow beyond the viewport height
-                        left: '5%', // Adjust left positioning relative to the container
+                        left: '-12%', // Adjust left positioning relative to the container
                          // Adjusted top to allow better placement
                         transform: 'rotate(-90deg)', // Rotates the image
                         objectFit: 'cover', // Ensures the image fully fills its container area if needed
@@ -39,6 +39,7 @@ const Landing: React.FC = () => {
             </div>
             <div className="sphinx">SPHINX</div>
             <div className="mtse">MTSE</div>
+            <br/>
             <div className="mtse2">MALAVIYA TALENT SEARCH EXAMINATION</div>
             <Button type="submit" className='btn' onClick={handleButtonClick}>Register NOW</Button>
 

@@ -63,7 +63,9 @@ const RegistrationForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col space-y-4 p-4 bg-gray-50 rounded-md shadow-lg">
+    <>
+
+    <form onSubmit={handleSubmit} className="flex flex-col space-y-4 p-8 bg-gray-50 rounded-md shadow-lg">
       <div>
         <Label>Student Name</Label>
         <Input
@@ -104,7 +106,7 @@ const RegistrationForm = () => {
           required label={""}        />
       </div>
       <div>
-        <Label>Aadhar No</Label>
+        <Label>Aadhaar No</Label>
         <Input
           type="text"
           name="aadharNo"
@@ -178,8 +180,9 @@ const RegistrationForm = () => {
           required label={""}
         />
       </div>
-      <Button type="submit">Register</Button>
+      <Button type="submit" style={{letterSpacing:"5px"}}>Register</Button>
     </form>
+    </>
   );
 };
 
