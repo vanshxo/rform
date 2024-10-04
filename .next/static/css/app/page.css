@@ -111,6 +111,22 @@ button:hover {
     }
 }
 
+/* RegistrationForm.css */
+.form-container {
+    position: relative; /* Allows for positioning child elements */
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height (or adjust as needed) */
+}
+
+.background-image {
+    z-index: 1; /* Place it behind the form */
+}
+
+.flex {
+    position: relative; /* Needed to make sure the overlay is behind the content */
+    z-index: 2; /* Place content above the background image */
+}
+
 /*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/ui/Landing.css ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************/
