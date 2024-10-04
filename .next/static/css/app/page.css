@@ -1,0 +1,232 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/ui/RegistrationForm.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
+/* Set body background to dark color and centralize form */
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url(/_next/static/media/font.4cfaa05f.otf) format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: MyCustomFont;
+  color: black;
+  
+}
+
+/* Form container styling */
+form {
+    background-color:black; /* Dark grey for form background */
+    padding: 20px;
+    border-radius: none;
+    width: 100%;
+    margin: auto; 
+    max-width: 600px;
+    color: #fff; /* White for contrast */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+/* Flexbox for form elements */
+.flex {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Spacing between form elements */
+}
+
+/* Label styling */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Input field and select styling */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+    background-color: transparent;
+    border: 2px solid #fff; /* Border for input fields */
+    border-radius: 4px; /* Rounded corners */
+    color: #fff; /* White text for contrast */
+    padding: 10px; /* Padding inside input fields */
+    width: 100%; /* Full width of parent */
+    margin-bottom: 16px; /* Spacing between elements */
+    outline: none; /* Remove default outline */
+    font-size: 1em; /* Consistent font size */
+}
+
+/* Focus styles for input fields */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #fff; /* Keep border color white */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.7), /* White glow */
+                0 0 15px rgba(255, 255, 255, 0.5); /* Softer outer glow */
+}
+
+/* Button styling */
+button {
+    background-color:rgb(210, 43, 43); /* Bright red */
+    color: #fff; /* Text color */
+    padding: 12px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: none; /* Rounded corners */
+    width: 100%; /* Full width */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: bold;
+    text-transform: uppercase; /* Make the button label uppercase */
+    font-size: 1em; /* Consistent font size */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #c30e12; /* Darken on hover */
+}
+
+
+@media (max-width: 768px) {
+    form {
+        padding: 0.5rem; /* Less padding on smaller screens */
+    }
+
+    button {
+        font-size: 0.9rem; /* Smaller font size on mobile */
+    }
+
+    input[type="text"],
+    input[type="url"],
+    input[type="number"],
+    input[type="date"],
+    textarea,
+    select {
+        padding: 0.4rem; /* Less padding on mobile */
+    }
+}
+
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/components/ui/Landing.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+/* Container for the entire landing section */
+.landing-container {
+    position: relative; /* Relative to allow the image and text to be positioned absolutely inside */
+    width: 100%;
+    height: 100vh; /* Full height of the viewport */
+    background-color: black; /* Set background color to black */
+    overflow: hidden; /* Hide overflow to avoid unwanted scrollbars */
+}
+
+/* Image styling */
+.image {
+    position: absolute; /* Absolute positioning based on the container */
+    width: 80vw; /* Width of the image relative to viewport width */
+    height: auto; /* Height auto to maintain aspect ratio */
+    max-height: 100%; /* Limit max height to prevent overflow */
+    left: 4.13px; /* Specific distance from the left of the container */
+    top: 30%; /* Specific distance from the top of the container */
+    background-image: url('https://via.placeholder.com/960x1163'); /* Placeholder image */
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center; /* Center the background image */
+    transform: rotate(-89.87deg); /* Rotate the image as specified */
+}
+
+/* Custom font face */
+@font-face {
+    font-family: 'Mechsuit';
+    src: url(/_next/static/media/Mechsuit.78f06086.otf) format('opentype'); /* Ensure the font path is correct */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* SPHINX Text */
+.sphinx {
+    position: absolute; /* Position absolutely */
+    left: calc(50% - 518px/2 + 300px);
+top: 210px;
+    font-family: 'Mechsuit', sans-serif; /* Add fallback font */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px; /* Fixed font size */
+    line-height: 1; /* Adjust line height for better spacing */
+    color: #FFFFFF;
+    text-align: center; /* Center the text */
+}
+
+/* MTSE Text */
+.mtse {
+    position: absolute; /* Position absolutely */
+    left: 730px;
+top: 320px;
+    font-family: 'Inter', sans-serif; /* Add fallback font */
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px; /* Fixed font size */
+    line-height: 1; /* Adjust line height for better spacing */
+    color: #FFFFFF;
+    text-align: center; /* Center the text */
+}
+
+/* Media Queries for Adjusting Layout on Smaller Screens */
+@media (max-width: 768px) {
+    .sphinx {
+        font-size: 60px; /* Smaller font size for tablets */
+        left: calc(50% - 150px); /* Adjust position for smaller screens */
+    }
+    .mtse {
+        font-size: 40px; /* Smaller font size for tablets */
+        left: calc(50% - 50px); /* Adjust position for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .sphinx {
+        font-size: 50px; /* Smaller font size for mobile devices */
+        left: calc(50% - 100px); /* Adjust position for smaller screens */
+    }
+    .mtse {
+        font-size: 30px; /* Smaller font size for mobile devices */
+        left: calc(50% - 30px); /* Adjust position for smaller screens */
+    }
+}
+.mtse2 {
+    position: absolute; /* Position absolutely */
+    left: 555px;
+top: 420px;
+    font-family: 'Inter', sans-serif; /* Add fallback font */
+    font-style: normal;
+    font-weight: 800;
+    font-size: 25px; /* Fixed font size */
+    line-height: 1; /* Adjust line height for better spacing */
+    color: #FFFFFF;
+    text-align: center; /* Center the text */
+}
+.btn{
+    background-color:rgb(210, 43, 43); /* Bright red */
+    color: #fff; /* Text color */
+    padding: 12px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: none; /* Rounded corners */
+    position: absolute;
+    width: 199px;
+    height: 47.16px;
+    left: 700px;
+    top: 470px;
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: bold;
+    text-transform: uppercase; /* Make the button label uppercase */
+    font-size: 1em; /* Consistent font size */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Group 59 */
+
+
+
+

@@ -1,0 +1,115 @@
+/* Container for the entire landing section */
+.landing-container {
+    position: relative; /* Relative to allow the image and text to be positioned absolutely inside */
+    width: 100%;
+    height: 100vh; /* Full height of the viewport */
+    background-color: black; /* Set background color to black */
+    overflow: hidden; /* Hide overflow to avoid unwanted scrollbars */
+}
+
+/* Image styling */
+.image {
+    position: absolute; /* Absolute positioning based on the container */
+    width: 80vw; /* Width of the image relative to viewport width */
+    height: auto; /* Height auto to maintain aspect ratio */
+    max-height: 100%; /* Limit max height to prevent overflow */
+    left: 4.13px; /* Specific distance from the left of the container */
+    top: 30%; /* Specific distance from the top of the container */
+    background-image: url('https://via.placeholder.com/960x1163'); /* Placeholder image */
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center; /* Center the background image */
+    transform: rotate(-89.87deg); /* Rotate the image as specified */
+}
+
+/* Custom font face */
+@font-face {
+    font-family: 'Mechsuit';
+    src: url('Mechsuit.otf') format('opentype'); /* Ensure the font path is correct */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* SPHINX Text */
+.sphinx {
+    position: absolute; /* Position absolutely */
+    left: calc(50% - 518px/2 + 300px);
+top: 210px;
+    font-family: 'Mechsuit', sans-serif; /* Add fallback font */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px; /* Fixed font size */
+    line-height: 1; /* Adjust line height for better spacing */
+    color: #FFFFFF;
+    text-align: center; /* Center the text */
+}
+
+/* MTSE Text */
+.mtse {
+    position: absolute; /* Position absolutely */
+    left: 730px;
+top: 320px;
+    font-family: 'Inter', sans-serif; /* Add fallback font */
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px; /* Fixed font size */
+    line-height: 1; /* Adjust line height for better spacing */
+    color: #FFFFFF;
+    text-align: center; /* Center the text */
+}
+
+/* Media Queries for Adjusting Layout on Smaller Screens */
+@media (max-width: 768px) {
+    .sphinx {
+        font-size: 60px; /* Smaller font size for tablets */
+        left: calc(50% - 150px); /* Adjust position for smaller screens */
+    }
+    .mtse {
+        font-size: 40px; /* Smaller font size for tablets */
+        left: calc(50% - 50px); /* Adjust position for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .sphinx {
+        font-size: 50px; /* Smaller font size for mobile devices */
+        left: calc(50% - 100px); /* Adjust position for smaller screens */
+    }
+    .mtse {
+        font-size: 30px; /* Smaller font size for mobile devices */
+        left: calc(50% - 30px); /* Adjust position for smaller screens */
+    }
+}
+.mtse2 {
+    position: absolute; /* Position absolutely */
+    left: 555px;
+top: 420px;
+    font-family: 'Inter', sans-serif; /* Add fallback font */
+    font-style: normal;
+    font-weight: 800;
+    font-size: 25px; /* Fixed font size */
+    line-height: 1; /* Adjust line height for better spacing */
+    color: #FFFFFF;
+    text-align: center; /* Center the text */
+}
+.btn{
+    background-color:rgb(210, 43, 43); /* Bright red */
+    color: #fff; /* Text color */
+    padding: 12px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: none; /* Rounded corners */
+    position: absolute;
+    width: 199px;
+    height: 47.16px;
+    left: 700px;
+    top: 470px;
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: bold;
+    text-transform: uppercase; /* Make the button label uppercase */
+    font-size: 1em; /* Consistent font size */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Group 59 */
+
+
+
