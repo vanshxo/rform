@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Button from "./Button";
 import Input from "./Input";
+import axios from "axios";
 import Label from "./Label";
 import './RegistrationForm.css'
 import { z } from "zod";
@@ -75,7 +76,27 @@ const RegistrationForm = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
   const onSubmit = async (data: any) => {
-    console.log("SUCCESS", data);
+    try {
+      const response = await axios.post("http://sphinxbackend-env.eba-im8kcmv8.us-east-1.elasticbeanstalk.com/api/mtse/register", {
+        
+          "name":"Divyansh",
+          "mobileNo":"9509333025",
+          "email":"divyansh@gmail.com",
+          "aadharNo":"123456789012",
+          "grade":"A",
+          "section":"A",
+          "divison":"A",
+          "schoolName":"ABC",
+          "city":"Jaipur",
+          "pincode":"302017",
+          "fathersName":"Ajdhsjd",
+          "fathersNo":"2398983893",
+          "referenceID":"9384938499"
+      
+      });
+    } catch (error) {
+      
+    }
 }
 
 
@@ -128,7 +149,7 @@ const RegistrationForm = () => {
           onChange={handleChange}
           required label={""}
         />
-                 {errors.studentName && <p className="text-red-500">{String(errors.studentName.message)}</p>}
+                 {errors.studentName && <p className="text-red-500" style={{color:"red"}}>{String(errors.studentName.message)}</p>}
       </div>
       <div>
         <Label>Father's Name</Label>
@@ -139,7 +160,7 @@ const RegistrationForm = () => {
           onChange={handleChange}
           required label={""}
         />
-         {errors.fatherName && <p className="text-red-500">{String(errors.fatherName.message)}</p>}
+         {errors.fatherName && <p className="text-red-500"  style={{color:"red"}}  style={{color:"red"}}>{String(errors.fatherName.message)}</p>}
       </div>
       <div>
         <Label>Father's Contact No</Label>
@@ -152,7 +173,7 @@ const RegistrationForm = () => {
           onChange={handleChange}
           required label={""}
         />
-        {errors.fatherNo && <p className="text-red-500">{String(errors.fatherNo.message)}</p>}
+        {errors.fatherNo && <p className="text-red-500"  style={{color:"red"}}>{String(errors.fatherNo.message)}</p>}
         
       </div>
       <div>
@@ -163,7 +184,7 @@ const RegistrationForm = () => {
           value={formData.email}
           onChange={handleChange}
           required label={""}        />
-            {errors.email && <p className="text-red-500">{String(errors.email.message)}</p>}
+            {errors.email && <p className="text-red-500"  style={{color:"red"}}>{String(errors.email.message)}</p>}
       </div>
       <div>
         <Label>Aadhar No</Label>
@@ -176,7 +197,7 @@ const RegistrationForm = () => {
           onChange={handleChange}
           required label={""}
         />
-        {errors.aadharNo && <p className="text-red-500">{String(errors.aadharNo.message)}</p>}
+        {errors.aadharNo && <p className="text-red-500"  style={{color:"red"}}>{String(errors.aadharNo.message)}</p>}
       </div>
       <div>
         <Label>Class</Label>
@@ -202,7 +223,7 @@ const RegistrationForm = () => {
           onChange={handleChange}
           required label={""}
         />
-         {errors.section && <p className="text-red-500">{String(errors.section.message)}</p>}
+         {errors.section && <p className="text-red-500"  style={{color:"red"}}>{String(errors.section.message)}</p>}
       </div>
       <div>
         <Label>Contact No</Label>
@@ -215,7 +236,7 @@ const RegistrationForm = () => {
           onChange={handleChange}
           required label={""}
         />
-         {errors.contactNo && <p className="text-red-500">{String(errors.contactNo.message)}</p>}
+         {errors.contactNo && <p className="text-red-500"  style={{color:"red"}}>{String(errors.contactNo.message)}</p>}
       </div>
       <div>
         <Label>Pincode</Label>
@@ -228,7 +249,7 @@ const RegistrationForm = () => {
           onChange={handleChange}
           required label={""}
           />
-          {errors.pincode && <p className="text-red-500">{String(errors.pincode.message)}</p>}
+          {errors.pincode && <p className="text-red-500"  style={{color:"red"}}>{String(errors.pincode.message)}</p>}
       </div>
       <div>
         <Label>School Name</Label>
@@ -239,7 +260,7 @@ const RegistrationForm = () => {
           onChange={handleChange}
           required label={""}
           />
-          {errors.schoolName && <p className="text-red-500">{String(errors.schoolName.message)}</p>}
+          {errors.schoolName && <p className="text-red-500"  style={{color:"red"}}>{String(errors.schoolName.message)}</p>}
       </div>
       <div>
         <Label>City</Label>
@@ -250,7 +271,7 @@ const RegistrationForm = () => {
           onChange={handleChange}
           required label={""}
           />
-          {errors.city && <p className="text-red-500">{String(errors.city.message)}</p>}
+          {errors.city && <p className="text-red-500"  style={{color:"red"}}>{String(errors.city.message)}</p>}
       </div>
       <Button type="submit">Register</Button>
     </form>
