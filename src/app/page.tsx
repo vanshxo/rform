@@ -10,6 +10,7 @@ export default function Home() {
     <Routes>
       <Route path="/" element={<Landing/>} />
       <Route path="/form" element={<RegistrationForm />} /> {/* Route for the form */}
+      <Route path="/confirmed" element={<Confirm/>} /> {/* Route for the form */}
     </Routes>
   </Router>
     

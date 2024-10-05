@@ -62,6 +62,7 @@ const RegistrationForm = () => {
     pincode: "",
     schoolName: "",
     city: "",
+    refId:"",
   });
   const {
     register,
@@ -79,19 +80,19 @@ const RegistrationForm = () => {
     try {
       const response = await axios.post("http://sphinxbackend-env.eba-im8kcmv8.us-east-1.elasticbeanstalk.com/api/mtse/register", {
         
-          "name":"Divyansh",
-          "mobileNo":"9509333025",
-          "email":"divyansh@gmail.com",
-          "aadharNo":"123456789012",
-          "grade":"A",
-          "section":"A",
-          "divison":"A",
-          "schoolName":"ABC",
-          "city":"Jaipur",
-          "pincode":"302017",
-          "fathersName":"Ajdhsjd",
-          "fathersNo":"2398983893",
-          "referenceID":"9384938499"
+          "name":formData.studentName,
+          "mobileNo":formData.contactNo,
+          "email":formData.email,
+          "aadharNo":formData.aadharNo,
+          "grade":formData.class,
+          "section":formData.section,
+          
+          "schoolName":formData.schoolName,
+          "city":formData.city,
+          "pincode":formData.pincode,
+          "fathersName":formData.fatherName,
+          "fathersNo":formData.fatherNo,
+          "referenceID":formData.refId
       
       });
     } catch (error) {
@@ -209,9 +210,9 @@ const RegistrationForm = () => {
           className="border border-gray-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="">Select Class</option>
-          <option value="C">Class 6-8</option>
-          <option value="D">Class 9-10</option>
-          <option value="E">Class 11-12</option>
+          <option value="A">Class 6-8</option>
+          <option value="B">Class 9-10</option>
+          <option value="C">Class 11-12</option>
         </select>
       </div>
       <div>
